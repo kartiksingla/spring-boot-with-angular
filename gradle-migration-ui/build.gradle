@@ -1,0 +1,15 @@
+plugins {
+  id 'java'
+  id("com.github.node-gradle.node") version "3.4.0"
+}
+node {
+  version = '16.16.0'
+  npmVersion = '8.11.0'
+  download = true
+}
+
+jar.dependsOn 'npm_run_build'
+
+jar {
+  from 'dist/gradle-migration-ui' into 'static'
+}

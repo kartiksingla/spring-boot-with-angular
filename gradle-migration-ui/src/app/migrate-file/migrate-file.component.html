@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="inputGradleDependenciesStructure">Gradle Migration Input</label>
+        <textarea class="form-control rounded-0" id="inputGradleDependenciesStructure" rows="20" name="inputTextArea" placeholder="dependencies {
+
+}" #inputTextArea></textarea>
+        <button id="convertButton" class="btn btn-primary float-right" (click)="migrateGradleFunction(inputTextArea.value)" style="margin-top:10px;" type="submit">Convert
+        </button>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label class="form-control-lg"><b>Output:</b></label>
+        <label for="outputGradleDependenciesStructure">build.gradle</label>
+        <textarea class="form-control rounded-0" id="outputGradleDependenciesStructure" rows="30" disabled>{{outputBuildGradle}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="gradleProperties">gradle.properties</label>
+        <textarea class="form-control rounded-0" id="gradleProperties" rows="15" disabled>{{outputGradleProperties}}</textarea>
+      </div>
+    </div>
+
+  </div>
+</div>
